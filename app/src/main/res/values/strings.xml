@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Heat 5 Setup Manager</string>
+    <string name="left_front_clicks">LF</string>
+    <string name="right_front_clicks">RF</string>
+    <string name="left_rear_clicks">LR</string>
+    <string name="right_rear_clicks">RR</string>
+</resources>

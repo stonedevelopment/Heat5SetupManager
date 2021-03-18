@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.MaterialComponents.CardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:strokeColor="@color/colorPrimary">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".333" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".666" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/SingleTireHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Left Tire" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outsideTemperatureLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Outside"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:suffixText="°F">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/outsideEditText"
+                style="@style/SingleTireEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:selectAllOnFocus="true"
+                tools:text="140" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/middleTemperatureLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Middle"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:suffixText="°F">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/middleEditText"
+                style="@style/SingleTireEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:selectAllOnFocus="true"
+                tools:text="140" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/insideTemperatureLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Inside"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:suffixText="°F">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/insideEditText"
+                style="@style/SingleTireEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:selectAllOnFocus="true"
+                tools:text="140" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

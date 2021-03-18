@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "Heat 5 Setup Manager"
