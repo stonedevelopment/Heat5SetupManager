@@ -4,4 +4,10 @@
     <string name="right_front_clicks">RF</string>
     <string name="left_rear_clicks">LR</string>
     <string name="right_rear_clicks">RR</string>
+    <string name="wedge_clicks">W</string>
+    <string name="tire_layout_left_front_title">Left Front</string>
+    <string name="tire_wear">Tire Wear</string>
+    <string name="outside">Outside</string>
+    <string name="middle">Middle</string>
+    <string name="inside">Inside</string>
 </resources>

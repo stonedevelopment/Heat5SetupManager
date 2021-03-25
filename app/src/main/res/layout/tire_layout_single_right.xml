@@ -30,17 +30,42 @@
             android:id="@+id/title"
             style="@style/SingleTireHeader"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="0dp"
+            android:gravity="bottom"
+            app:layout_constraintBottom_toBottomOf="@+id/tireWearLayout"
+            app:layout_constraintEnd_toStartOf="@+id/tireWearLayout"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Right Tire" />
+            tools:text="Single Right" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tireWearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/tire_wear"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:suffixText="%">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tireWearEditText"
+                style="@style/TireWearEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:selectAllOnFocus="true"
+                tools:text="51" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/insideTemperatureLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="Inside"
+            android:hint="@string/inside"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/title"
@@ -63,7 +88,7 @@
             android:id="@+id/middleTemperatureLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="Middle"
+            android:hint="@string/middle"
             app:layout_constraintEnd_toStartOf="@+id/guideline2"
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/title"
@@ -86,7 +111,7 @@
             android:id="@+id/outsideTemperatureLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="Outside"
+            android:hint="@string/outside"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toBottomOf="@+id/title"

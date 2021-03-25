@@ -23,8 +23,23 @@
         <item name="android:textAlignment">center</item>
     </style>
 
+    <style name="TireWearEditText" parent="SingleTireEditText">
+        <item name="android:background">@color/colorNascar1</item>
+        <item name="android:textColor">@color/colorNascar2</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
     <style name="SingleTireClicks" parent="TextAppearance.MaterialComponents.Headline4">
         <item name="android:background">#00ffff</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="WedgeClicks" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="android:background">@color/colorNascar1</item>
         <item name="android:textStyle">bold</item>
         <item name="android:padding">8dp</item>
         <item name="android:layout_margin">4dp</item>
