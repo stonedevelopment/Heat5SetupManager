@@ -2,32 +2,40 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.Light">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorNascar3</item>
-        <item name="colorPrimaryDark">@color/colorNascar2</item>
-        <item name="colorAccent">@color/colorNascar1</item>
-        <item name="android:textColorPrimary">@color/colorNascar1</item>
-        <item name="android:textColorSecondary">@color/colorNascar2</item>
+        <!--        <item name="colorPrimary">@color/colorNascar3</item>-->
+        <!--        <item name="colorPrimaryDark">@color/colorNascar2</item>-->
+        <!--        <item name="colorAccent">@color/colorNascar1</item>-->
+        <!--        <item name="android:textColorPrimary">@color/colorNascar1</item>-->
+        <!--        <item name="android:textColorSecondary">@color/colorNascar2</item>-->
     </style>
 
     <style name="SingleTireHeader" parent="TextAppearance.MaterialComponents.Headline5">
-        <item name="android:background">@color/colorNascar3</item>
-        <item name="android:textColor">@color/colorNascar1</item>
+<!--        <item name="android:background">@color/colorNascar3</item>-->
+<!--        <item name="android:textColor">@color/colorNascar1</item>-->
         <item name="android:textStyle">bold</item>
         <item name="android:padding">8dp</item>
     </style>
 
-    <style name="SingleTireEditText" parent="TextAppearance.MaterialComponents.Headline5">
-        <item name="android:background">@color/colorNascar2</item>
-        <item name="android:textColor">@color/colorNascar1</item>
+    <style name="TextInput" parent="TextAppearance.MaterialComponents.Headline5">
+        <!--        <item name="android:background">@color/colorNascar2</item>-->
+        <!--        <item name="android:textColor">@color/colorNascar1</item>-->
         <item name="android:textStyle">bold</item>
         <item name="android:textAlignment">center</item>
     </style>
 
-    <style name="TireWearEditText" parent="SingleTireEditText">
-        <item name="android:background">@color/colorNascar1</item>
-        <item name="android:textColor">@color/colorNascar2</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textAlignment">center</item>
+    <style name="TireWear" parent="TextInput">
+        <!--        <item name="android:background">@color/colorNascar1</item>-->
+        <!--        <item name="android:textColor">@color/colorNascar2</item>-->
+    </style>
+
+    <style name="CurrentLap" parent="TextInput">
+        <!--        <item name="android:background">@color/colorNascar1</item>-->
+        <!--        <item name="android:textColor">@color/colorNascar2</item>-->
+    </style>
+
+    <style name="FuelLaps" parent="TextInput">
+        <!--        <item name="android:background">@color/colorNascar1</item>-->
+        <!--        <item name="android:textColor">@color/colorNascar2</item>-->
     </style>
 
     <style name="SingleTireClicks" parent="TextAppearance.MaterialComponents.Headline4">
