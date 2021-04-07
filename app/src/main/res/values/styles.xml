@@ -10,8 +10,8 @@
     </style>
 
     <style name="SingleTireHeader" parent="TextAppearance.MaterialComponents.Headline5">
-<!--        <item name="android:background">@color/colorNascar3</item>-->
-<!--        <item name="android:textColor">@color/colorNascar1</item>-->
+        <!--        <item name="android:background">@color/colorNascar3</item>-->
+        <!--        <item name="android:textColor">@color/colorNascar1</item>-->
         <item name="android:textStyle">bold</item>
         <item name="android:padding">8dp</item>
     </style>
@@ -61,8 +61,35 @@
         <item name="android:textAlignment">center</item>
     </style>
 
-    <style name="ShapeAppearanceOverlay.Button.Rounded" parent="">
-        <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">50%</item>
+    <style name="RaceCardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">0dp</item>
+    </style>
+
+    <style name="RaceCardView.Start">
+        <item name="cardBackgroundColor">#00BCD4</item>
+    </style>
+
+    <style name="RaceCardView.Caution">
+        <item name="cardBackgroundColor">#FFEB3B</item>
+    </style>
+
+    <style name="RaceCardView.Pit">
+        <item name="cardBackgroundColor">#FF9800</item>
+    </style>
+
+    <style name="RaceCardView.Restart">
+        <item name="cardBackgroundColor">#8BC34A</item>
+    </style>
+
+    <style name="RaceCardView.End">
+        <item name="cardBackgroundColor">#E91E63</item>
+    </style>
+
+    <style name="RaceCardViewTitle" parent="TextAppearance.MaterialComponents.Headline4" />
+
+    <style name="RaceLapNumberText" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center</item>
     </style>
 </resources>
