@@ -17,7 +17,6 @@
             app:layout_constraintGuide_percent=".66" />
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/materialTextView"
             style="@style/RaceCardViewTitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -32,14 +31,14 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/floatingActionButton"
+            android:id="@+id/lapNumberCardView"
             style="@style/RaceCardView.Caution"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/materialTextView"
+            app:layout_constraintStart_toEndOf="@+id/guidelinev66"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -47,6 +46,7 @@
                 android:layout_height="match_parent">
 
                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/lapNumberText"
                     style="@style/RaceLapNumberText"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -59,6 +59,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </com.google.android.material.card.MaterialCardView>

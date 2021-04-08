@@ -13,25 +13,25 @@
             android:id="@+id/guidelinev66"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent=".66" />
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".5" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guidelineh33"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             app:layout_constraintGuide_percent=".33" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guidelineh66"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             app:layout_constraintGuide_percent=".66" />
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/materialTextView"
+            android:id="@+id/titleText"
             style="@style/RaceCardViewTitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -40,19 +40,20 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
             android:text="Pit"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/guidelinev66"
+            app:layout_constraintBottom_toBottomOf="@+id/guidelinev66"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineh66"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/pitLap"
-            style="@style/RaceCardView.Pit"
+            android:id="@+id/lapNumberCardView"
+            style="@style/RaceCardView.Start"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@+id/guidelineh33"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/guidelinev66"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/guidelinev66"
+            app:layout_constraintStart_toEndOf="@+id/guidelineh66"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -60,35 +61,39 @@
                 android:layout_height="match_parent">
 
                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/lapNumberText"
                     style="@style/RaceLapNumberText"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
                     android:text="1"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/optLap"
+            android:id="@+id/normalPitLapCardView"
             style="@style/RaceCardView.Pit"
             android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@+id/guidelineh66"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/guidelinev66"
-            app:layout_constraintTop_toBottomOf="@+id/guidelineh33">
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineh33"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guidelinev66">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/normalPitLapText"
                     style="@style/RaceLapNumberText"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -104,20 +109,51 @@
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/stretchLap"
+            android:id="@+id/optimizedPitLapCardView"
+            style="@style/RaceCardView.Pit"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineh66"
+            app:layout_constraintStart_toEndOf="@+id/guidelineh33"
+            app:layout_constraintTop_toBottomOf="@+id/guidelinev66">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/optimizedPitLapText"
+                    style="@style/RaceLapNumberText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/stretchPitLapCardView"
             style="@style/RaceCardView.Pit"
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/guidelinev66"
-            app:layout_constraintTop_toBottomOf="@+id/guidelineh66">
+            app:layout_constraintStart_toEndOf="@+id/guidelineh66"
+            app:layout_constraintTop_toBottomOf="@+id/guidelinev66">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/stretchPitLapText"
                     style="@style/RaceLapNumberText"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
