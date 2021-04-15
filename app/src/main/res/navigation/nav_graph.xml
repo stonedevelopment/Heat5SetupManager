@@ -2,12 +2,4 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph"
-    app:startDestination="@id/tireTempFragment">
-
-    <fragment
-        android:id="@+id/tireTempFragment"
-        android:name="com.gmail.stonedevs.heatsetupmanager.ui.list_temp.TireTempFragment"
-        android:label="tire_temp_fragment"
-        tools:layout="@layout/tire_temp_fragment" />
-</navigation>
+    android:id="@+id/nav_graph" />

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.setup.RaceSetupFragment">
+
+    <!--
+      Max laps:
+        Green flag restart fuel laps
+        Pit restart fuel laps
+        Tire wear laps
+
+      Stages:
+        Number of stages
+        Stages 1-4 in checkbox format
+            Start lap
+            Final lap
+    -->
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/greenFlagRestartFuelLapsLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:hint="@string/green_flag_restart_laps"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:suffixText="laps">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/greenFlagRestartFuelLaps"
+            style="@style/FuelLaps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            tools:text="19" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/greenFlagPitRestartFuelLapsLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:hint="@string/green_flag_pit_laps"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/greenFlagRestartFuelLapsLayout"
+        app:suffixText="laps">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/greenFlagPitRestartFuelLaps"
+            style="@style/FuelLaps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            tools:text="20" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tireWearLapsLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:hint="@string/tire_wear_laps"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/greenFlagPitRestartFuelLapsLayout"
+        app:suffixText="laps">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tireWearLaps"
+            style="@style/FuelLaps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            tools:text="26" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/stage1CheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/stage1Layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/stage1Layout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/stage1Layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:hint="@string/start_lap"
+        app:layout_constraintStart_toEndOf="@+id/stage1CheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/tireWearLapsLayout"
+        app:suffixText="laps">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/stage1"
+            style="@style/FuelLaps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            tools:text="26" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

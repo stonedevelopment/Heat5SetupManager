@@ -7,14 +7,14 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.gmail.stonedevs.heatsetupmanager.databinding.RaceFragmentBinding;
 
 import org.jetbrains.annotations.NotNull;
 
-public class RaceFragment extends Fragment {
+public class RaceFragment extends NavHostFragment {
 
     private RaceFragmentBinding binding;
     private RaceViewModel viewModel;
@@ -55,6 +55,7 @@ public class RaceFragment extends Fragment {
                 case Init:
                     //  race setup pop up
                     //  if any card is pressed, show pop up
+                    viewModel.init();
                     break;
                 case PreRace:
                     //  only card enabled is start

@@ -10,4 +10,9 @@
     <string name="outside">Outside</string>
     <string name="middle">Middle</string>
     <string name="inside">Inside</string>
+    <string name="green_flag_restart_laps">Green Flag Restart Fuel Laps</string>
+    <string name="green_flag_pit_laps">Green Flag Pit Fuel Laps</string>
+    <string name="tire_wear_laps">Tire Wear Laps</string>
+    <string name="start_lap">Start Lap</string>
+    <string name="last_lap">Last Lap</string>
 </resources>
